@@ -12,7 +12,7 @@ h1.addEventListener('click', (e) => {
     h2.innerHTML = '<p class="text-warning">Select</p>'
     h3.innerHTML = '<p class="text-warning">Select</p>'
 
-    locationString = "House 1"
+    locationString = "Dc house, league street, off Uwasota"
     locationPhone = '+23490766534'
 })
 
@@ -24,7 +24,7 @@ h2.addEventListener('click', (e) => {
     h1.innerHTML = '<p class="text-warning">Select</p>'
     h3.innerHTML = '<p class="text-warning">Select</p>'
 
-    locationString = "House 2"
+    locationString = "Clark house, El street Ugbowo"
     locationPhone = '+23480644352'
 })
 
@@ -36,7 +36,7 @@ h3.addEventListener('click', (e) => {
     h1.innerHTML = '<p class="text-warning">Select</p>'
     h2.innerHTML = '<p class="text-warning">Select</p>'
 
-    locationString = "House 3"
+    locationString = "Lex house, No.1 Luther Street, GRA"
     locationPhone = '+2348033458900'
 })
 
