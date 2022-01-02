@@ -98,23 +98,43 @@ submitAllBtn.addEventListener('click', (e => {
     database = {
         items: []
     }
+    
     //Get data from user details form
     let userDetailsFormData = new FormData(userDetailsForm)
     for (let key of userDetailsFormData.keys()) {
+        if (userDetailsFormData.get(key) == '') {
+            let alertMessage = document.getElementById('alertDanger')
+            alertMessage.style.display = 'block'
+            setTimeout(() => {
+                alertMessage.style.display = 'none'
+            }, 7000)
+            window.location.href = '/storage'
+        }
         database[key] = userDetailsFormData.get(key)
     }
+
     //Get items
     for (let i = 0; i < list.children.length; i++) {
         database.items.push(list.children[i].firstElementChild.innerText)
     }
+
     //Get group name
     let actualGroupName = groupName.innerText.split(':')
+    if (actualGroupName[1] == '') {
+            let alertMessage = document.getElementById('alertDanger')
+            alertMessage.style.display = 'block'
+            setTimeout(() => {
+                alertMessage.style.display = 'none'
+            }, 7000)
+            window.location.href = '/storage'
+    }
     database['groupName'] = actualGroupName[1]
+
     //Get storage location
     let storageLocation = `${locationString}, ${locationPhone}`
     database['storageLocation'] = storageLocation
 
-    console.log(database)
+    // console.log(database)
 
     //Send data to backend
     fetch('/storage', {

@@ -75,4 +75,36 @@ router.post('/residence', (req, res) => {
     })
 })
 
+router.delete('/:id', (req, res) => {
+    if (req.params.id == 'residence') {
+        Residence.deleteOne({ firstname: req.body.firstname, surname: req.body.surname }, (err, user) => {
+            if (err) {
+                res.json({
+                    message: 'Error',
+                    err
+                })
+            } else {
+                res.status(200).json({
+                    message: 'Success',
+                    user
+               }) 
+            }
+        })
+    } else {
+        Storage.deleteOne({ firstname: req.body.firstname, surname: req.body.surname }, (err, user) => {
+            if (err) {
+                res.json({
+                    message: 'Error',
+                    err
+                })
+            } else {
+                res.status(200).json({
+                    message: 'Success',
+                    user
+               }) 
+            }
+        })
+    }
+})
+
 module.exports = router

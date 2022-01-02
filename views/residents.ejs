@@ -24,7 +24,7 @@
     <div class="overlay py-1">
         <div class="top-nav">
             <a href="/" class="text-light mr-5 ml-2">Home</a>
-            <a href="/residents" class="text-light mr-5 active-nav">Residents</a>
+            <a href="/residents" class="text-light mr-5 active-nav">Spaces</a>
             <a href="/plans" class="text-light mr-5">Plans</a>
         </div>
 
@@ -79,18 +79,24 @@
                                     </p>
                                 </div>
                                 <div class="d-flex">
-                                    <b class="mr-3">Storage Location:</b>
+                                    <b class="mr-3">Group Name:</b>
                                     <p class="m-0 text-warning">
                                         <%= residentsData.storage[i].groupName %>
                                     </p>
                                 </div>
                                 <div class="d-flex">
-                                    <b class="mr-3">Storage Location:</b>
+                                    <b class="mr-3">Location:</b>
                                     <p class="m-0 text-warning">
                                         <%= residentsData.storage[i].storageLocation %>
                                     </p>
                                 </div>
                             </div>
+                            <button class="btn btn-outline-danger btn-block w-50 mr-auto ml-auto mb-3 text-light" id="deleteBtn">
+                                Delete
+                                <p id="surnameID" style="display: none;"><%= residentsData.storage[i].surname %></p>
+                                <p id="firstnameID" style="display: none;"><%= residentsData.storage[i].firstname %></p>
+                                <p style="display: none;">storage</p>
+                            </button>
                         </div>
                     <% } %>
                 </div>
@@ -101,15 +107,11 @@
                             <div class="card-body">
                                 <div class="d-flex">
                                     <b class="mr-3">First Name:</b>
-                                    <p class="m-0 text-warning">
-                                        <%= residentsData.residence[i].firstname %>
-                                    </p>
+                                    <p class="m-0 text-warning"><%= residentsData.residence[i].firstname %></p>
                                 </div>
                                 <div class="d-flex">
                                     <b class="mr-3">Last Name:</b>
-                                    <p class="m-0 text-warning">
-                                        <%= residentsData.residence[i].lastname %>
-                                    </p>
+                                    <p class="m-0 text-warning"><%= residentsData.residence[i].lastname %></p>
                                 </div>
                                 <div class="d-flex">
                                     <b class="mr-3">Surname:</b>
@@ -130,11 +132,17 @@
                                     </p>
                                 </div>
                                 <div class="d-flex">
-                                    <b class="mr-3">Residential Location:</b>
+                                    <b class="mr-3">Location:</b>
                                     <p class="m-0 text-warning">
                                         <%= residentsData.residence[i].residentialLocation %>
                                     </p>
                                 </div>
+                                <button class="btn btn-outline-danger btn-block w-50 mr-auto ml-auto mb-3 mt-3 text-light" id="deleteBtn">
+                                    Delete
+                                    <p id="surnameID" style="display: none;"><%= residentsData.residence[i].surname %></p>
+                                    <p id="firstnameID" style="display: none;"><%= residentsData.residence[i].firstname %></p>
+                                    <p style="display: none;">residence</p>
+                                </button>
                             </div>
                         </div>
                     <% } %>

@@ -53,6 +53,14 @@ submitAllBtn.addEventListener('click', (e => {
     //Get data from user details form
     let userDetailsFormData = new FormData(userDetailsForm)
     for (let key of userDetailsFormData.keys()) {
+        if (userDetailsFormData.get(key) == '') {
+            let alertMessage = document.getElementById('alertDanger')
+            alertMessage.style.display = 'block'
+            setTimeout(() => {
+                alertMessage.style.display = 'none'
+            }, 7000)
+            window.location.href = '/residence'
+        }
         database[key] = userDetailsFormData.get(key)
     }
     //Get storage location
