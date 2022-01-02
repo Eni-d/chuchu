@@ -1,0 +1,198 @@
+html, body {
+    width: 100%;
+    height: 100vh;
+}
+
+body {
+    background-image: url('/img/home.jpg');
+    background-size: cover;
+    backdrop-filter: blur(14px);
+    overflow-y: scroll !important;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100% !important;
+    height: 350px !important;
+    object-fit: cover;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.top-nav {
+    display: flex;
+}
+
+.active-nav {
+    color: rgb(240, 160, 13) !important;
+    border-bottom: solid 2px rgb(240, 160, 13);
+}
+
+.nav li a {
+    color: #ffffff !important;
+    transition: .6s !important;
+}
+
+.nav li a:hover {
+    border: solid 1px #fff;
+    color: rgb(240, 160, 13) !important;
+}
+
+.overlay {
+    height: inherit;
+    width: 100%;
+    background: black;
+    opacity: .9;
+}
+
+.card {
+    background: #2e2a29;
+    opacity: .5;
+    border-left: 2px solid rgb(240, 160, 13);
+}
+
+.plans {
+    margin-top: 2vh;
+    height: 75%;
+    box-sizing: border-box;
+    overflow-y: scroll;
+}
+
+.itemForm {
+    background: #2e2a29;
+    border-left: 2px solid rgb(240, 160, 13);
+}
+
+.itemForm input {
+    background: none !important;
+    color: #ffffff !important;
+    border-radius: 20px !important;
+}
+
+.itemForm button {
+    color: rgb(240, 160, 13) !important;
+    transition: .6s !important;
+}
+
+.itemForm button:hover {
+    border: solid 1px rgb(240, 160, 13);
+    color: #ffffff !important;
+}
+
+.groupForm {
+    background: #2e2a29;
+    border-left: 2px solid rgb(240, 160, 13);
+}
+
+.groupForm input {
+    background: none !important;
+    color: #ffffff !important;
+    border-radius: 20px !important;
+}
+
+.groupForm button {
+    color: rgb(240, 160, 13) !important;
+    transition: .6s !important;
+}
+
+.groupForm button:hover {
+    border: solid 1px rgb(240, 160, 13);
+    color: #ffffff !important;
+}
+
+.input {
+    background: none !important;
+    color: #ffffff !important;
+    border-radius: 20px !important;
+    width: 10% !important;
+    transition: 1s !important;
+}
+
+input:focus {
+    width: 100% !important;
+    border: solid 2px rgb(240, 160, 13) !important;
+}
+
+#group {
+    background: none !important;
+    color: #616060 !important;
+    border-radius: 20px !important;
+    width: 10% !important;
+    transition: 1s !important;
+}
+
+#group:focus {
+    width: 100% !important;
+    border: solid 2px rgb(240, 160, 13) !important;
+}
+
+.icon {
+    border-radius: 50%;
+    border: solid 2px rgb(240, 160, 13);
+    color: rgb(240, 160, 13) !important;
+}
+
+.proceed {
+    border-radius: 30px;
+    border: solid 2px rgb(240, 160, 13);
+}
+
+.proceed:hover {
+    background: rgb(240, 160, 13);
+}
+
+.groupBtn {
+    border-radius: 30px;
+    border: solid 1px rgb(240, 160, 13);
+    display: none;
+}
+
+.groupName {
+    display: none;
+}
+
+.groupBtn:hover {
+    background: rgb(240, 160, 13);
+    color: #ffffff;
+}
+
+.submit {
+    border: solid 1px rgb(240, 160, 13);
+    transition: .5s;
+}
+
+.submit:hover {
+    background: rgb(240, 160, 13);
+    color: #ffffff;
+}
+
+#item {
+    border-left: solid 2px rgb(240, 160, 13);
+    color: rgb(187, 187, 187);
+    background: #2e2a29;
+}
+
+@media screen and (max-width: 760px) {
+    html, body {
+        width: 100%;
+        height: 170vh;
+    }
+
+    .plans {
+        margin-top: 15vh;
+    }
+}
+
+@media only screen and (min-width: 760px) {
+    html, body {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .plans {
+        margin-top: 15vh;
+    }
+}
+

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
+    <link rel="stylesheet" href="css/residents.css">
+    <title>Residents</title>
+
+    <style>
+        body {
+            font-family: Nunito;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="overlay py-1">
+        <div class="top-nav">
+            <a href="/" class="text-light mr-5 ml-2">Home</a>
+            <a href="/residents" class="text-light mr-5 active-nav">Residents</a>
+            <a href="/plans" class="text-light mr-5">Plans</a>
+        </div>
+
+        <div class="container text-center text-light plans">
+            <ul class="nav nav-pills text-light mb-3">
+                <li class="active"><a data-toggle="pill" href="#storage" class="mr-3 p-2">Storage</a></li>
+                <li><a data-toggle="pill" href="#residential" class="p-2">Residential</a></li>
+            </ul>
+            
+            <div class="tab-content">
+                <div id="storage" class="tab-pane active">
+                    <h3>Storage</h3>
+                    <% for(let i=0; i < residentsData.storage.length; i++) { %>
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <div class="d-flex">
+                                    <b class="mr-3">First Name:</b>
+                                    <p class="m-0 text-warning">
+                                        <%= residentsData.storage[i].firstname %>
+                                    </p>
+                                </div>
+                                <div class="d-flex">
+                                    <b class="mr-3">Last Name:</b>
+                                    <p class="m-0 text-warning">
+                                        <%= residentsData.storage[i].lastname %>
+                                    </p>
+                                </div>
+                                <div class="d-flex">
+                                    <b class="mr-3">Surname:</b>
+                                    <p class="m-0 text-warning">
+                                        <%= residentsData.storage[i].surname %>
+                                    </p>
+                                </div>
+                                <div class="d-flex">
+                                    <b class="mr-3">Email:</b>
+                                    <p class="m-0 text-warning">
+                                        <%= residentsData.storage[i].email %>
+                                    </p>
+                                </div>
+                                <div class="d-flex">
+                                    <b class="mr-3">Phone:</b>
+                                    <p class="m-0 text-warning">
+                                        <%= residentsData.storage[i].phone %>
+                                    </p>
+                                </div>
+                                <div class="d-flex">
+                                    <b class="mr-3">Items:</b>
+                                    <p class="m-0 text-warning">
+                                        <% for(let j = 0; j < residentsData.storage[i].items.length; j++ ) { %>
+                                            <%= residentsData.storage[i].items[j] %>,
+                                        <% } %>
+                                    </p>
+                                </div>
+                                <div class="d-flex">
+                                    <b class="mr-3">Storage Location:</b>
+                                    <p class="m-0 text-warning">
+                                        <%= residentsData.storage[i].storageLocation %>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    <% } %>
+                </div>
+                <div id="residential" class="tab-pane fade">
+                    <h3>Residential Allocations</h3>
+                    <% for(let i=0; i < residentsData.residence.length; i++) { %>
+                        <div class="card mb-3 text-center">
+                            <div class="card-body">
+                                <div class="d-flex">
+                                    <b class="mr-3">First Name:</b>
+                                    <p class="m-0 text-warning">
+                                        <%= residentsData.residence[i].firstname %>
+                                    </p>
+                                </div>
+                                <div class="d-flex">
+                                    <b class="mr-3">Last Name:</b>
+                                    <p class="m-0 text-warning">
+                                        <%= residentsData.residence[i].lastname %>
+                                    </p>
+                                </div>
+                                <div class="d-flex">
+                                    <b class="mr-3">Surname:</b>
+                                    <p class="m-0 text-warning">
+                                        <%= residentsData.residence[i].surname %>
+                                    </p>
+                                </div>
+                                <div class="d-flex">
+                                    <b class="mr-3">Email:</b>
+                                    <p class="m-0 text-warning">
+                                        <%= residentsData.residence[i].email %>
+                                    </p>
+                                </div>
+                                <div class="d-flex">
+                                    <b class="mr-3">Phone:</b>
+                                    <p class="m-0 text-warning">
+                                        <%= residentsData.residence[i].phone %>
+                                    </p>
+                                </div>
+                                <div class="d-flex">
+                                    <b class="mr-3">Residential Location:</b>
+                                    <p class="m-0 text-warning">
+                                        <%= residentsData.residence[i].residentialLocation %>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="js/residents.js"></script>
+</body>
+
+</html>
