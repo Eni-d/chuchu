@@ -15,7 +15,7 @@ mongoose.connect('mongodb+srv://dbDaniel:dbDaniel@cluster0.rcsbe.mongodb.net/spa
 })
 
 app.set('view engine', 'ejs')
-app.use(express.static('public'))
+app.use(express.static('./public'))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 app.use('/', router)
